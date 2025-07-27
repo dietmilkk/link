@@ -42,7 +42,7 @@ hr {
     text-align: left;
     border: none;
     margin-top: 4%;
-    transition: background 0.1s, color 0.3s, transform 0.5s;
+    transition: background 0s, color 0.5s, transform 0.7s;
 }
 
 .link a.link-btn:hover {
