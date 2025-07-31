@@ -1,4 +1,4 @@
-Copyright (c) [2025] [pepsi_coca2]. All rights reserved.
+Copyright (c) [2025] [thinkmilk2]. All rights reserved.
 
 LEGAL NOTICE:
 This work, including all code, design, text, and images in this repository,  
