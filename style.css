@@ -21,7 +21,7 @@ body {
 iframe {
     box-sizing: border-box;
     border: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 15px;
     border-color: #202020;
 }
@@ -81,6 +81,7 @@ body, iframe, .link a.link-btn, html {
 @media (max-width: 700px) {
     .link a.link-btn {border-radius: 6px;}
     #about {border-radius: 6px;}
+    iframe {border-radius: 0; border-width: 0; height: 463px;}
 }
 
 @media (max-width: 480px) {

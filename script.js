@@ -104,27 +104,28 @@ function rand(min, max) {
 }
 
 for (let i = 0; i < NUM_BALLS; i++) {
+  const size = rand(16, 64); // intervalo maior para tamanhos
   const ball = document.createElement('div');
   ball.style.position = 'fixed';
-  ball.style.width = rand(24, 40) + 'px'; // tamanho aleatório
-  ball.style.height = ball.style.width;
+  ball.style.width = size + 'px';
+  ball.style.height = size + 'px';
   ball.style.borderRadius = '50%';
-  ball.style.background = colors[Math.floor(Math.random() * colors.length)] + Math.floor(rand(16, 64)).toString(16); // transparência aleatória
-  ball.style.boxShadow = `0 2px 12px ${colors[Math.floor(Math.random() * colors.length)]}${Math.floor(rand(8, 32)).toString(16)}`;
-  ball.style.zIndex = Math.floor(rand(1, 4)); // z-index aleatório
-  ball.style.left = rand(0, window.innerWidth - 40) + 'px';
-  ball.style.top = rand(0, window.innerHeight - 40) + 'px';
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)] + '11';
+  ball.style.boxShadow = `0 2px 12px ${colors[Math.floor(Math.random() * colors.length)]}11`;
+  ball.style.zIndex = Math.floor(rand(1, 4));
+  ball.style.left = rand(0, window.innerWidth - size) + 'px';
+  ball.style.top = rand(0, window.innerHeight - size) + 'px';
   document.body.appendChild(ball);
 
   balls.push({
     el: ball,
-    x: rand(0, window.innerWidth - 40),
-    y: rand(0, window.innerHeight - 40),
-    vx: rand(-1.5, 1.5), // velocidade inicial aleatória
+    x: rand(0, window.innerWidth - size),
+    y: rand(0, window.innerHeight - size),
+    vx: rand(-1.5, 1.5),
     vy: rand(-1.5, 1.5),
-    gravity: rand(0.05, 0.25), // gravidade aleatória
-    bounce: rand(0.15, 0.7),   // bounce aleatório
-    maxHeight: rand(0.5, 1.5)  // altura máxima aleatória
+    gravity: rand(0.05, 0.25),
+    bounce: rand(0.15, 0.7),
+    maxHeight: rand(0.5, 1.5)
   });
 }
 
